@@ -2,11 +2,51 @@
 
 **黑曜棱镜的 DeepSeek Harness 桌面移植版。** 本项目独立维护，原项目 Obsidian Prism 由 RMvdesi 与上游贡献者开发。本版已在 Windows 版 DeepSeek Harness **0.2.2-rc.5** 上验证。[Antigravity 原项目](https://github.com/RMvdesi/obsidian-prism) · [v0.3.4 版本说明与性能对比](CHANGELOG.md)
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/previews/hero-dark.webp">
+  <source media="(prefers-color-scheme: light)" srcset="assets/previews/hero-light.webp">
+  <img src="assets/previews/hero-light.webp" alt="DSH 新会话首页在活动热图与七天趋势之间切换，点击空白处时字符底纹泛起涟漪。">
+</picture>
+
+画面录自 DeepSeek Harness 桌面端，「潮汐图册」「灯塔手记」两个工作区及其中的会话和模型回复均为虚构示例。
+
 ## 安装与升级
 
 - 在 GitHub 的 **Releases → v0.3.4** 下载 `Obsidian-Prism4DSH-0.3.4.zip`。压缩包内含可直接加载的插件、对应源码和构建脚本。插件标识沿用 `dsh-obsidian-prism`，升级后可继续读取原有设置。
 - 首次安装时，将 ZIP 解压到固定位置，打开 DSH 的 **设置 → 插件 → 添加插件**，输入解压后包含 `package.json` 的 `dsh-obsidian-prism` 文件夹的完整路径。完成后按应用提示重启。
 - 如果原来安装的是另一个固定目录的副本，可以退出 DSH 后把新版解压到该插件目录，保留同一目录名称，再启动 DSH。
+
+## 功能预览
+
+### 四套界面配色
+
+同一张活动热图分别采用深空黑曜、白昼冷晶、暖炭玄岩和暖白画册四套配色，方便对照侧栏、卡片和底部光晕。
+
+![同一 DSH 首页在两套深色与两套浅色主题下的实拍对照](assets/previews/palettes.webp)
+
+### 推理等级与上下文试管
+
+在模型菜单拖动滑块，插件会记住该模型的推理等级，点开输入框右侧的占用环即可查看上下文水位。
+
+![深色 High 与浅色 Low 推理滑块，以及占用 32.4% 的示例上下文试管](assets/previews/optics.webp)
+
+### 字心涟漪
+
+连续输入两组文字时，每圈波纹都从该组文字的中心向外扩散，越过输入框后在字符底纹中显现。
+
+![依次输入月牙沙滩和雾灯塔时，第二圈涟漪从更靠右的位置展开](assets/previews/typing-ripple.webp)
+
+### 桌宠选角与输入框
+
+在选角舞台点亮伙伴，它们就会站上输入框，并在切换会话时留在原位。
+
+![左边是桌宠选角舞台，右边是同一阵容站在输入框上沿的实景和特写](assets/previews/companions.webp)
+
+### Chat 对话模式（Beta）
+
+在「Beta 内容」开启 Chat 模式后，即可从侧栏切换到独立对话空间，图中打开的是虚构会话「给地图写图例」。
+
+![浅色 Chat 工作区左侧列出 Knowledge 与 Spark 会话，右侧展示折光岛的手绘地图图例](assets/previews/chat-mode.webp)
 
 ## 操作
 
