@@ -1,0 +1,11 @@
+/* Preserve the navigator's upstream 20px button, 268px glass popover and turn typography. */
+html[data-ag-cs-style] [data-row-key^="session:"]:has(>.prism-outline-trigger) {position:relative}
+html[data-ag-cs-style] [data-row-key^="session:"]>.prism-outline-trigger {
+  left:4px;right:auto;top:50%;transform:translateY(-50%);opacity:0;z-index:1;
+}
+html[data-ag-cs-style] [data-row-key^="session:"]:is(:hover,:focus-within)>.prism-outline-trigger,
+html[data-ag-cs-style] [data-row-key^="session:"]>.prism-outline-trigger[aria-expanded=true] {opacity:1}
+html[data-ag-cs-style] .ag-cs-nav-outline-popover.prism-outline-rail {position:fixed;z-index:1500}
+html[data-ag-cs-style] .prism-outline-rail .ag-cs-nav-outline-item:focus-visible,
+html[data-ag-cs-style] .prism-outline-trigger:focus-visible {outline:1px solid var(--primary,var(--pr-accent));outline-offset:-1px}
+@media (hover:none) {html[data-ag-cs-style] [data-row-key^="session:"]>.prism-outline-trigger {opacity:.8}}

@@ -1,0 +1,117 @@
+/* Obsidian Prism settings shell. Dimensions follow workbench/replica.html. */
+.prism-panel-brand { background: center / contain no-repeat url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20class%3D%22ag-cs-brand-logo-svg%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20viewBox%3D%220%200%201024%201024%22%3E%3Cpath%20fill%3D%22%232D3A54%22%20d%3D%22M405%20103L674%20103C693%20103%20712%20102%20730%20104C777%20108%20821%20127%20854%20161C880%20187%20899%20220%20908%20255C916%20289%20915%20322%20915%20357L915%20433L915%20656C915%20681%20916%20709%20913%20734C909%20783%20889%20829%20854%20864C822%20896%20781%20914%20736%20919C717%20921%20699%20921%20680%20921L625%20921L417%20921L351%20921C320%20921%20291%20922%20260%20914C226%20906%20195%20889%20171%20864C139%20833%20119%20792%20112%20748C110%20732%20109%20715%20109%20698L109%20442L109%20359C109%20324%20108%20290%20116%20256C125%20220%20144%20187%20169%20161C205%20126%20250%20107%20299%20104C315%20103%20331%20103%20347%20103L405%20103Z%22%2F%3E%3Cpath%20fill%3D%22%2312151E%22%20d%3D%22M313%20114C320%20113%20330%20113%20337%20113L377%20113L504%20113L642%20113C678%20113%20715%20111%20751%20118C841%20135%20900%20213%20904%20302C905%20330%20905%20358%20905%20386L905%20524L905%20647C905%20683%20906%20723%20899%20758C892%20791%20876%20822%20854%20848C816%20891%20768%20907%20712%20910C679%20911%20643%20910%20609%20910L445%20910L360%20910C329%20910%20301%20911%20271%20905C183%20887%20124%20811%20120%20723C119%20694%20120%20665%20120%20637L120%20500L120%20376C120%20341%20118%20300%20125%20265C132%20232%20148%20201%20171%20175C196%20147%20231%20128%20269%20119C284%20116%20298%20115%20313%20114Z%22%2F%3E%3Cpath%20fill%3D%22%231E293B%22%20d%3D%22M512%20206C551%20208%20563%20239%20582%20268C598%20292%20614%20317%20628%20341C651%20377%20675%20417%20696%20453C726%20503%20756%20554%20785%20604C793%20617%20800%20631%20808%20644C815%20657%20826%20674%20829%20688C832%20706%20830%20719%20819%20735C811%20747%20794%20757%20779%20758C764%20759%20746%20759%20730%20759C707%20758%20682%20759%20659%20759C653%20759%20647%20759%20641%20759L603%20759L484%20759L425%20759C421%20759%20402%20759%20400%20759C365%20758%20330%20759%20295%20759C281%20759%20258%20760%20245%20758C237%20757%20230%20754%20223%20750C209%20743%20199%20730%20195%20715C189%20691%20199%20674%20210%20654L230%20620C259%20569%20289%20518%20319%20468C330%20450%20341%20431%20353%20412C376%20374%20399%20335%20423%20297L450%20254C467%20228%20478%20208%20512%20206Z%22%2F%3E%3Cpath%20fill%3D%22%23FBBC04%22%20d%3D%22M696%20453C726%20503%20756%20554%20785%20604C793%20617%20800%20631%20808%20644C815%20657%20826%20674%20829%20688C832%20706%20830%20719%20819%20735C811%20747%20794%20757%20779%20758C764%20759%20746%20759%20730%20759C707%20758%20682%20759%20659%20759C644%20735%20630%20710%20615%20686L560%20596L532%20549C528%20543%20521%20531%20517%20525L519%20521C520%20520%20522%20520%20523%20519C528%20517%20532%20516%20536%20515C533%20513%20529%20512%20526%20511C528%20509%20555%20501%20559%20499L648%20469C664%20464%20681%20459%20696%20453Z%22%2F%3E%3Cpath%20fill%3D%22%23EA4335%22%20d%3D%22M696%20453C726%20503%20756%20554%20785%20604C793%20617%20800%20631%20808%20644C815%20657%20826%20674%20829%20688C827%20687%20817%20681%20814%20680C791%20668%20769%20655%20746%20643L590%20556C577%20549%20563%20541%20549%20533C541%20529%20531%20524%20523%20519C528%20517%20532%20516%20536%20515C533%20513%20529%20512%20526%20511C528%20509%20555%20501%20559%20499L648%20469C664%20464%20681%20459%20696%20453Z%22%2F%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M319%20468C321%20472%20353%20577%20352%20579C355%20586%20358%20596%20360%20604L372%20645L395%20722C398%20733%20401%20744%20404%20755C405%20757%20405%20757%20404%20758C403%20759%20402%20759%20400%20759C365%20758%20330%20759%20295%20759C281%20759%20258%20760%20245%20758C237%20757%20230%20754%20223%20750C209%20743%20199%20730%20195%20715C189%20691%20199%20674%20210%20654L230%20620C259%20569%20289%20518%20319%20468Z%22%2F%3E%3Cpath%20fill%3D%22%234285F4%22%20d%3D%22M512%20206C551%20208%20563%20239%20582%20268C598%20292%20614%20317%20628%20341C651%20377%20675%20417%20696%20453C681%20459%20664%20464%20648%20469L559%20499C555%20501%20528%20509%20526%20511C522%20510%20519%20509%20517%20505C515%20499%20514%20489%20512%20485L502%20416C501%20410%20499%20394%20498%20389C499%20379%20500%20368%20500%20358L505%20302C507%20271%20511%20236%20512%20206Z%22%2F%3E%3Cpath%20fill%3D%22%239B72CB%22%20d%3D%22M628%20341C651%20377%20675%20417%20696%20453C681%20459%20664%20464%20648%20469L559%20499C555%20501%20528%20509%20526%20511C522%20510%20519%20509%20517%20505C520%20504%20615%20360%20628%20341Z%22%2F%3E%3Cpath%20fill%3D%22%23DCEBFF%22%20d%3D%22M319%20468C330%20450%20341%20431%20353%20412C376%20374%20399%20335%20423%20297L450%20254C467%20228%20478%20208%20512%20206C511%20236%20507%20271%20505%20302L500%20358C500%20368%20499%20379%20498%20389C486%20403%20474%20419%20463%20434C437%20469%20411%20503%20385%20537C374%20551%20363%20565%20352%20579C353%20577%20321%20472%20319%20468Z%22%2F%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M512%20485C514%20489%20515%20499%20517%20505C519%20509%20522%20510%20526%20511C529%20512%20533%20513%20536%20515C532%20516%20528%20517%20523%20519C522%20520%20520%20520%20519%20521L517%20525C515%20531%20514%20537%20512%20543C510%20536%20508%20529%20506%20522C499%20518%20494%20516%20487%20514C494%20512%20499%20511%20505%20508C508%20502%20510%20492%20512%20485Z%22%2F%3E%3C%2Fsvg%3E"); }
+/* The surrounding native Antigravity settings window is 860 x 660 with a 200 px side column. */
+dialog.prism-panel-shell {
+  --panel-bg:var(--ag-cs-dlg-bg,#0c0d10);
+  --nav-bg:var(--ag-cs-dlg-nav-bg,#07080a);
+  --nav-hover:var(--ag-cs-dlg-nav-hov,#121318);
+  --nav-active:var(--ag-cs-dlg-nav-act,#16171c);
+  margin:auto;inset:0;padding:0;width:min(860px,calc(100vw - 48px));height:min(660px,calc(100dvh - 64px));
+  max-width:none;max-height:none;border:1px solid var(--_kb);border-radius:16px;overflow:hidden;
+  background:var(--panel-bg);color:var(--foreground);box-shadow:0 25px 50px -12px #0006;
+  font:14px/1.45 var(--font-sans,system-ui,sans-serif);
+}
+dialog.prism-panel-shell[open] {display:grid;grid-template-columns:200px minmax(0,1fr);}
+dialog.prism-panel-shell::backdrop {background:var(--scrim,rgba(9,9,11,.74));}
+html[data-ag-cs-theme="light"] dialog.prism-panel-shell {
+  --panel-bg:var(--ag-cs-dlg-bg,#f6f7fa);--nav-bg:var(--ag-cs-dlg-nav-bg,#eceff5);
+  --nav-hover:var(--ag-cs-dlg-nav-hov,rgba(15,23,42,.045));--nav-active:var(--ag-cs-dlg-nav-act,#fff);
+}
+.prism-panel-shell .prism-panel-nav {
+  display:flex;flex-flow:column nowrap;align-items:stretch;justify-content:start;gap:4px;
+  padding:12px;background:var(--nav-bg);border:0;border-right:1px solid var(--_kd);
+}
+.prism-panel-nav .prism-nav-title {font-size:14px;font-weight:600;line-height:20px;padding:5px 8px 8px;}
+.prism-panel-shell .prism-panel-nav button {
+  font:inherit;font-weight:400;display:flex;align-items:center;justify-content:space-between;
+  background:transparent;color:var(--secondary-foreground);text-align:left;min-height:32px;padding:6px 10px;
+  border-radius:8px;border:none;cursor:pointer;transition:background-color 120ms ease,color 120ms ease;
+}
+.prism-panel-shell .prism-panel-nav button:hover {background:var(--nav-hover);color:var(--foreground);}
+.prism-panel-shell .prism-panel-nav button[data-ag-cs-nav-active] {
+  background:var(--nav-active);color:var(--foreground);box-shadow:inset 0 1px 0 rgba(255,255,255,.058);font-weight:500;
+}
+.prism-panel-shell .prism-panel-nav .prism-nav-close {margin-top:auto;color:var(--muted-foreground);font-size:12px;}
+.prism-nav-close kbd {font:11px var(--ag-cs-mono-stack);}
+.prism-panel-shell .prism-panel-body {min-width:0;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:24px;}
+.prism-panel-body>h2 {font:600 18px/1.4 var(--font-sans);letter-spacing:-.02em;color:var(--foreground);margin:0 0 17px;}
+.prism-settings-center {width:100%;box-sizing:border-box;font-family:var(--font-sans);text-align:start;}
+.prism-settings-center .prism-brand-title {font-size:14px;font-weight:600;letter-spacing:-.01em;line-height:20px;}
+.prism-settings-guts {display:flex;flex-direction:column;gap:12px;}
+.prism-settings-center .prism-stage-mount:empty {display:none;}
+.prism-settings-center [role="group"] {flex-shrink:0;max-width:100%;}
+.prism-settings-center .py-2 {align-content:center;}
+.prism-input-label {position:relative;display:inline-flex;align-items:center;cursor:pointer;color:var(--secondary-foreground);}
+.prism-input-label input[type="file"] {position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;}
+.prism-input-label:focus-within {outline:2px solid var(--primary);outline-offset:1px;}
+.prism-wall-import {display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11px;color:var(--muted-foreground);}
+.prism-roster-box {
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  padding:8px 10px;border-radius:10px;border:1px solid var(--ag-cs-border-1);background:var(--ag-cs-tonal-1);
+}
+.prism-roster-chips {display:flex;align-items:center;flex-wrap:wrap;gap:5px;font-size:11px;color:var(--secondary-foreground);}
+.prism-roster-chips strong {margin-right:4px;font-weight:600;}
+.prism-roster-chip {display:inline-flex;align-items:center;gap:4px;padding:1px 6px;border:1px solid var(--ag-cs-border-1);border-radius:999px;}
+.prism-roster-chip i {width:6px;height:6px;border-radius:50%;}
+.prism-settings-center button.prism-stage-open {
+  display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border:1px solid color-mix(in srgb,var(--primary) 62%,transparent);
+  background:color-mix(in srgb,var(--primary) 14%,transparent);color:var(--foreground);border-radius:8px;font:600 11.5px var(--font-sans);cursor:pointer;
+}
+.prism-stage-open span {display:flex;}
+.prism-panel-shell :is(.prism-model-pane,.prism-preview) {
+  border:1px solid var(--_kb);background:var(--_k0);border-radius:12px;padding:14px;
+}
+.prism-panel-shell :is(.prism-actions button,.prism-model-pane>button,.prism-model-pane select) {
+  font:500 12px var(--font-sans);height:29px;padding:0 10px;
+  border-radius:var(--ag-cs-r-md);color:var(--secondary-foreground);background:var(--ag-cs-pill-bg);border:1px solid var(--ag-cs-border-2);
+}
+.prism-panel-shell .prism-actions {flex-wrap:wrap;}
+.prism-panel-shell .prism-actions button.prism-primary {
+  background:color-mix(in srgb,var(--primary) 14%,var(--ag-cs-pill-bg));border-color:color-mix(in srgb,var(--primary) 40%,var(--ag-cs-border-2));color:var(--foreground);
+}
+.prism-panel-shell .prism-panel-body :is(input[type="search"], textarea) {
+  font:12.5px/1.5 var(--font-sans);background:color-mix(in srgb,var(--background) 68%,var(--card));color:var(--foreground);
+  padding:8px 10px;border:1px solid var(--ag-cs-border-1);border-radius:var(--ag-cs-r-md);
+}
+.prism-panel-body .prism-chat-log {min-height:36px;max-height:240px;overflow:auto;scrollbar-width:thin;}
+.prism-panel-body .prism-chat-log:empty {display:none;}
+.prism-panel-body .prism-chat-log p,.prism-panel-body .prism-translation {margin:3px 0 8px;font-size:13px;line-height:1.6;}
+.prism-panel-body .prism-outline {list-style:none;counter-reset:prism-outline;margin:10px 0 0;padding:0;border:1px solid var(--_kb);border-radius:12px;background:var(--_k0);overflow:hidden;}
+.prism-panel-body .prism-outline li {display:flex;align-items:center;counter-increment:prism-outline;position:relative;border-bottom:1px solid var(--_kd);padding:2px 12px;}
+.prism-panel-body .prism-outline li:last-child {border-bottom:0;}
+.prism-panel-body .prism-outline li::before {content:counter(prism-outline,decimal-leading-zero);font:11px var(--ag-cs-mono-stack);color:var(--muted-foreground);}
+.prism-panel-body .prism-outline button {flex:1;border:0;border-radius:6px;background:transparent;color:var(--foreground);font-size:13px;text-align:start;padding:9px;}
+.prism-panel-body .prism-outline li:hover {background:var(--ag-cs-hover-wash);}
+.prism-panel-body [role=alert] {color:var(--error);}
+.prism-panel-body .prism-preview {display:flex;flex-direction:column;gap:10px;}
+.prism-panel-body .prism-preview input {max-width:100%;font-size:12px;color:var(--muted-foreground);}
+.prism-panel-body .prism-preview input::file-selector-button {
+  font:500 12px var(--font-sans);color:var(--secondary-foreground);padding:4px 10px;margin-right:8px;
+  border-radius:6px;border:1px solid var(--ag-cs-border-2);background:var(--ag-cs-pill-bg);cursor:pointer;
+}
+@media(max-width:700px) {
+  dialog.prism-panel-shell[open] {grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);width:calc(100vw - 22px);height:calc(100dvh - 40px);}
+  .prism-panel-shell .prism-panel-nav {flex-flow:row nowrap;overflow-x:auto;border:0;border-bottom:1px solid var(--_kd);padding:9px;gap:2px;}
+  .prism-panel-nav .prism-nav-title {display:none;}
+  .prism-panel-shell .prism-panel-nav button {white-space:nowrap;font-size:12px;padding:5px 8px;}
+  .prism-panel-shell .prism-panel-nav .prism-nav-close {margin:0 0 0 auto;}
+  .prism-nav-close kbd {display:none;}
+  .prism-panel-shell .prism-panel-body {padding:15px;}
+  .prism-settings-center .ag-cs-settings-fold-summary {display:none;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .prism-settings-center *,dialog.prism-panel-shell[open] {animation:none!important;transition:none!important;}
+}
+.prism-settings-center .ag-cs-seg-btn::after {content:"";position:absolute;inset:0;border-radius:6px;pointer-events:none;opacity:0;background:rgba(148,163,184,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.12);transform-origin:top left;}
+dialog.prism-panel-shell, .prism-panel-shell *, .prism-settings-center * {box-sizing:border-box;}
+/* Keep the DSH disclosure and response accessible. The mode applies only to its source slot. */
+[data-variant="think"][data-prism-thought-view="immersive"] [data-slot="conversation.chat.reasoning.body"] {display:none!important;}
+[data-variant="think"][data-prism-thought-view="bilingual"] [data-slot="conversation.chat.reasoning.body"]> :first-child {
+  display:block;opacity:.68;border-top:1px dashed var(--ag-cs-border-2);margin-top:8px;padding-top:7px;
+}
+.prism-inline.ag-prism-thought-overlay {border-inline-start:1px solid var(--ag-cs-thought-rule);padding:2px 0 2px 11px;margin:2px 0 6px 0;}
+.prism-inline .prism-translation {font-size:12.5px;line-height:1.56;color:var(--secondary-foreground);}
+.prism-inline .prism-thought-actions {display:flex;align-items:center;gap:7px;flex-wrap:wrap;}
+.prism-inline .prism-thought-actions button {cursor:pointer;color:var(--muted-foreground);font:500 11px var(--font-sans);background:transparent;border:0;padding:3px 0;}
+.prism-inline .prism-thought-actions button:hover {color:var(--primary);}
+.prism-inline [hidden] {display:none!important;}

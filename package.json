@@ -1,0 +1,29 @@
+{
+  "name": "dsh-obsidian-prism",
+  "version": "0.3.4",
+  "description": "Obsidian-Prism4DSH · 黑曜棱镜的 DeepSeek Harness 桌面移植版",
+  "type": "module",
+  "main": "./src/host.js",
+  "exports": {
+    ".": "./src/host.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "inject": ["@deepseek-ai/dsh-client-ui-slots", "@deepseek-ai/dsh-client-ui-conversation", "@deepseek-ai/dsh-client-ui-model-selection", "@deepseek-ai/dsh-client-ui-theme", "@deepseek-ai/dsh-client-ui-sidebar-right"]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-llm": "0.2.2-rc.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "scripts": { "build": "node scripts/build.mjs" },
+  "license": "GPL-3.0-only"
+}
+

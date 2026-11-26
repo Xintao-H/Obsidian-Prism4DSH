@@ -1,0 +1,3 @@
+# Keep vendored license texts, build inputs and generated output byte-identical on checkout.
+* -text
+.gitattributes export-ignore

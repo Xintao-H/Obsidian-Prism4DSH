@@ -1,0 +1,55 @@
+/* Native DSH surfaces share Antigravity's actual material and palette tokens. */
+html[data-prism-theme]:not([data-prism-theme=host]) body {
+  --pr-bg:var(--content);--pr-card:var(--card);--pr-ink:var(--foreground);--pr-muted:var(--muted-foreground);--pr-accent:var(--ag-cs-accent,var(--primary));--pr-edge:var(--border);
+  --dsw-alias-bg-base:var(--content)!important;--dsw-alias-bg-layer-1:var(--card)!important;
+  --dsw-alias-bg-layer-2:var(--secondary)!important;--dsw-specific-sidebar-fill:var(--sidebar)!important;
+  --dsw-alias-bg-module-platform:var(--content)!important;--dsw-alias-label-primary:var(--foreground)!important;
+  --dsw-alias-label-secondary:var(--secondary-foreground)!important;--dsw-alias-label-tertiary:var(--muted-foreground)!important;
+  --dsw-alias-label-caption:var(--muted-foreground)!important;--dsw-alias-border-l1:var(--card-border)!important;
+  --dsw-alias-markdown-code-block:var(--_k1)!important;font-family:var(--font-sans);background:var(--content);
+}
+html[data-prism-theme]:not([data-prism-theme=host]) [data-slot=sidebar],
+html[data-prism-theme]:not([data-prism-theme=host]) [data-slot=sidebar]>div {background:var(--sidebar);color:var(--secondary-foreground);}
+html[data-prism-theme]:not([data-prism-theme=host]) [data-slot=sidebar] [data-window-drag]{height:43px;min-height:43px;padding:0 9px;}
+html[data-prism-theme][data-prism-workspace]:not([data-prism-theme=host]) [data-slot=sidebar] [data-window-drag]>button:has([data-slot="sidebar.brand.name"]){width:26px;min-width:26px;flex:none;padding:0;}
+html[data-prism-theme][data-prism-workspace]:not([data-prism-theme=host]) [data-slot="sidebar.brand.name"]{display:none;}
+html[data-prism-theme][data-prism-workspace]:not([data-prism-theme=host]) [data-slot="sidebar.brand.mark"] svg{width:19px;height:19px;}
+html[data-prism-theme]:not([data-prism-theme=host]) [data-slot="sidebar.session.action"] button{justify-content:flex-start;height:32px;background:transparent;border:0;box-shadow:none;border-radius:var(--ag-cs-r-md);color:var(--secondary-foreground);font:500 13px var(--font-sans);}
+html[data-prism-theme]:not([data-prism-theme=host]) [data-slot="sidebar.session.action"] button:hover{background:var(--sidebar-muted);}
+html[data-prism-theme]:not([data-prism-theme=host]) [data-sidebar-scrollport] :is([role=treeitem],nav button){border-radius:var(--ag-cs-r-md);min-height:29px;font-size:12.5px;}
+html[data-prism-theme]:not([data-prism-theme=host]) [data-row-key^="session:"][class*="_selected"]{background:var(--sidebar-secondary);box-shadow:inset 2px 0 var(--ag-cs-accent,var(--primary));color:var(--foreground);}
+html[data-prism-theme]:not([data-prism-theme=host]) [data-sidebar-workspace-header]{color:var(--muted-foreground);font-size:11px;}
+.prism-rail-button:hover{background:var(--sidebar-muted);color:var(--foreground);}
+html[data-prism-theme]:not([data-prism-theme=host]) [data-slot="conversation.header"] header{background:var(--content);font:12px var(--font-sans);border-bottom-color:var(--border);}
+html[data-prism-theme]:not([data-prism-theme=host]) [data-conversation-tabs] [role=tab]{font-size:12px;}
+.prism-rail-button{border:0;background:none;color:var(--muted-foreground);width:27px;height:27px;padding:5px;border-radius:5px;cursor:pointer;}
+[data-slot="conversation.session.header.utilities"]{display:flex;}
+html[data-prism-theme]:not([data-prism-theme=host]) [data-conversation-content]{isolation:isolate;position:relative;background:var(--content);}
+html[data-prism-theme]:not([data-prism-theme=host]) [data-home-whale]{display:none!important;}
+[data-prism-code-view] .ag-cs-ripple-host,[data-ag-cs-conv-ripple-host]>.ag-cs-ripple-host{z-index:0!important;}
+html[data-ag-cs-home-ripple="off"] .ag-cs-ripple-host[data-ripple-mode="home"] .ag-cs-ripple-canvas{visibility:hidden!important;}
+/* Keep the native controls above a single canvas spanning the central conversation panel. */
+html[data-prism-theme] [data-prism-field-panel]:not([data-prism-code-view])>[data-prism-code-view] {
+  background:transparent!important;position:relative;z-index:1;
+}
+html[data-prism-theme] [data-ag-cs-conv-ripple-host] [data-slot="conversation.header"] header {
+  position:relative;z-index:1;background:transparent;
+}
+html[data-prism-theme] [data-prism-code-view][data-content-phase="active"] [data-composer-seat] {
+  background:transparent;
+}
+[data-prism-code-view]>[data-slot="conversation.hero.frame"]{position:relative;z-index:1;height:100%;background:transparent;}
+[data-prism-code-view] [data-conversation-scroll], [data-prism-code-view] [data-composer-seat]{background:transparent;}
+[data-prism-code-view] .ag-cs-conv-aura-host{z-index:0!important;}
+html[data-ag-cs-style] [data-chat-group-part=response] [data-text-interaction-source]{font:400 14px/1.65 var(--font-sans);color:var(--foreground);}
+html[data-ag-cs-style] [data-chat-group-part=response] :is(h1,h2,h3){letter-spacing:-.015em;font-weight:600;}
+html[data-ag-cs-style] [data-variant=think][data-expanded]{border-left:2px solid var(--ag-cs-thought-rule);border-radius:0;padding-left:12px;color:var(--_tf);}
+html[data-ag-cs-style] [data-variant=think] [data-slot="conversation.chat.reasoning.body"]{font:12.5px/1.56 var(--font-sans);}
+html[data-ag-cs-style] .md-code-block{border:1px solid var(--_kb);background:var(--_k1);box-shadow:var(--_ks2);border-radius:var(--ag-cs-r-lg);overflow:clip;}
+html[data-ag-cs-style] [data-code-block-banner]{position:sticky;top:0;z-index:1;color:var(--muted-foreground);background:var(--_k0);border-bottom:1px solid var(--_kd);height:31px;}
+html[data-ag-cs-style] [data-code-block-content] pre{font-family:var(--ag-cs-mono-stack);font-size:12px;line-height:1.58;}
+.prism-context{position:fixed;}
+html[data-prism-wallpaper] [data-prism-code-view],html[data-prism-wallpaper] [data-conversation-content]{background:color-mix(in srgb,var(--content) 58%,transparent)!important;}
+html[data-ag-cs-style] [data-code-block-content],html[data-ag-cs-style] [data-code-block-content] pre{background:var(--_k1)!important;}
+html[data-prism-theme]:not([data-prism-theme=host]) [data-slot="sidebar.session.action"] button [class*="_newSessionLabelMask"]{flex:1;text-align:left;justify-content:flex-start;}
+[data-slot="sidebar"] [data-window-drag] button{ -webkit-app-region:no-drag;}

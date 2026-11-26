@@ -1,0 +1,46 @@
+/* Sidebar Studio mounts in the active DSH conversation and its shared left sidebar. */
+[data-slot="sidebar"] [data-window-drag]>.ag-prism-mode-dock {
+  flex:1 1 128px;max-width:160px;min-width:100px;order:0;padding:0 3px;-webkit-app-region:no-drag;
+}
+html[data-prism-workspace] [data-slot="sidebar"] [data-window-drag]>[data-sidebar-toggle] {order:2;}
+[data-conversation-content]:has(>[data-prism-chat-space]) {position:relative;isolation:isolate;}
+html[data-prism-workspace="chat"] [data-slot="sidebar"] [data-window-drag]>button:has([data-slot="sidebar.brand.name"]) {display:none;}
+html[data-prism-workspace="chat"] [data-slot="sidebar"] [data-window-drag]~div:has(>[data-slot="sidebar.session.action"]),
+html[data-prism-workspace="chat"] [data-sidebar-scrollport]>:not([data-prism-chat-sidebar]) {display:none!important;}
+[data-sidebar-scrollport]:has(>[data-prism-chat-sidebar]) {display:flex;flex-direction:column;overflow:hidden;}
+[data-prism-chat-sidebar] {min-width:0;height:100%;padding-top:4px;}
+[data-prism-chat-sidebar] [data-prism-sb-folder-grid][inert], [data-prism-chat-sidebar] [inert] {pointer-events:none;}
+[data-prism-chat-space] .ag-prism-chat-input {
+  cursor:text;white-space:pre-wrap;overflow-wrap:anywhere;caret-color:var(--ag-sb-active-anchor);
+}
+[data-prism-chat-space] .ag-prism-chat-input:empty::before {float:left;height:0;}
+.prism-space-select {position:relative;cursor:pointer;max-width:220px;overflow:hidden;}
+.prism-space-select>span:not(:first-child){overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.prism-space-select .ag-cs-model-glyph {width:15px;height:15px;}
+.prism-space-select>svg:last-of-type {transform:rotate(90deg);}
+.prism-space-select select {position:absolute;inset:0;max-width:100%;width:100%;height:100%;opacity:0;cursor:pointer;}
+.prism-space-select select option {color:var(--ag-sb-fg);background:var(--ag-sb-container);}
+.prism-space-select:focus-within {outline:2px solid var(--ag-sb-active-anchor);}
+.prism-chat-error {font-size:12px;color:var(--error,#d65555);margin:8px 6px;}
+[data-prism-chat-space][data-has-conversation="1"] {overflow:hidden;padding:0 0 8px;}
+[data-prism-chat-space][data-has-conversation="1"] .ag-prism-chat-home-inner {flex:0 0 auto;padding:6px 14px 4px;margin:0;}
+[data-prism-chat-space][data-has-conversation="1"] .ag-prism-vessel-wrap {width:min(760px,100%);animation:none;}
+.prism-space-reading {flex:1 1 0;width:100%;overflow:auto;min-height:0;overscroll-behavior:contain;}
+.prism-space-page {padding:28px 20px 14px;max-width:760px;margin:auto;display:flex;flex-direction:column;align-items:flex-start;gap:22px;}
+.prism-space-page article {min-width:0;max-width:100%;font-size:15px;line-height:1.65;color:var(--ag-sb-fg);}
+.prism-space-page article[data-role="user"] {
+  align-self:flex-end;border-radius:22px 22px 6px 22px;background:var(--ag-sb-container);padding:11px 18px;max-width:85%;
+}
+.prism-space-page article strong,.prism-space-page small,.prism-space-pending {font-size:12px;font-weight:500;color:var(--ag-sb-muted);}
+.prism-space-prose {white-space:pre-wrap;overflow-wrap:anywhere;}
+@media(max-width:600px) {
+  [data-prism-chat-space] {padding:16px;}
+  [data-prism-chat-space] .ag-prism-subseg {grid-template-columns:repeat(2,minmax(48px,1fr));}
+  [data-prism-chat-space] .ag-prism-subbtn {padding:0 5px;}
+  .prism-space-select {max-width:125px;}
+}
+/* Antigravity applies Tailwind's border-box reset to its application. Scope it to the transplanted UI. */
+:is([data-prism-chat-space],[data-prism-chat-sidebar],[data-prism-mode-dock]) *,
+:is([data-prism-chat-space],[data-prism-chat-sidebar],[data-prism-mode-dock]) *::before,
+:is([data-prism-chat-space],[data-prism-chat-sidebar],[data-prism-mode-dock]) *::after {box-sizing:border-box;}
+html[data-prism-workspace="chat"] [data-slot="sidebar"] [data-window-drag]>.ag-prism-mode-dock {margin-right:auto;padding-left:4px;}

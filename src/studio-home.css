@@ -1,0 +1,38 @@
+/* Center the greeting and overview together; the native composer keeps its own reading width. */
+[data-content-phase=hero]:has(.prism-home-seat) {
+  --prism-home-column:var(--_cm,48rem);
+  --prism-home-gutter:clamp(12px,2.25vw,30px);
+  --dsh-composer-card-max-width:var(--prism-home-column);
+}
+[data-content-phase=hero] [data-conversation-scroll]:has(>.prism-home-seat) {
+  justify-content:flex-start;scrollbar-gutter:auto;margin:0;isolation:isolate;
+}
+.prism-home-seat {position:relative;z-index:1;flex:1 1 auto;min-height:0;overflow:auto;scrollbar-width:thin;scrollbar-gutter:stable both-edges;}
+.prism-studio-hero {padding:20px var(--prism-home-gutter) 16px;box-sizing:border-box;}
+.prism-studio-inner {width:100%;max-width:520px;margin-inline:auto;display:flex;flex-direction:column;align-items:flex-start;gap:10px;}
+.prism-studio-inner [data-testid=home-greeting] {display:flex;align-items:center;gap:10px;margin:0;padding:4px 0 0;}
+.prism-studio-inner .home-greeting-mark {display:block;width:22px;height:auto;flex:none;color:var(--ag-cs-accent,var(--primary));opacity:.95;}
+.prism-studio-inner .home-greeting-title {margin:0;color:var(--foreground);font:450 21px/28px Newsreader,'Noto Serif SC',var(--font-sans);letter-spacing:-.016em;}
+.prism-studio-inner .ag-cs-home-heat-cell {padding:0;border:0;min-width:0;}
+.prism-studio-inner :is(button,select,[tabindex]):focus-visible {outline:2px solid var(--ag-cs-accent,var(--primary));outline-offset:1px;}
+.prism-studio-inner .ag-cs-home-ws-select {max-width:min(160px,100%);}
+.prism-studio-inner .ag-cs-home-local-note {font-size:11px;line-height:1.4;color:var(--muted-foreground);padding-top:8px;border-top:1px solid var(--_kb);}
+[data-content-phase=hero]:has(.prism-home-seat) [data-composer-seat] {
+  flex:0 0 auto;width:100%;max-width:calc(var(--prism-home-column) + 2 * var(--prism-home-gutter));align-self:center;
+}
+[data-content-phase=hero]:has(.prism-home-seat) [class*=_composerHero] {
+  width:100%;padding:0 max(0px,calc(var(--prism-home-gutter) - 16px)) 16px;box-sizing:border-box;
+}
+[data-content-phase=hero]:has(.prism-home-seat) [class*=_headline] {display:none;}
+[data-content-phase=hero]:has(.prism-home-seat) [class*=_heroWorkspaceRow] {
+  position:relative;z-index:3;align-self:flex-start;max-width:100%;margin:0 0 16px;
+}
+html[data-ag-cs-style] [data-content-phase=hero][data-conversation-session]:has(.prism-home-seat) [data-composer-placeholder] {font-size:0;}
+[data-content-phase=hero][data-conversation-session]:has(.prism-home-seat) [data-composer-placeholder]::after {
+  content:'描述任务或提出问题';font:400 14px/22px var(--font-sans);
+}
+html[data-prism-workspace=chat] .prism-home-seat {display:none;}
+@media (max-height:500px) {
+  .prism-studio-hero {padding-top:12px;}
+  [data-content-phase=hero]:has(.prism-home-seat) [class*=_composerHero] {padding-bottom:4px;}
+}
